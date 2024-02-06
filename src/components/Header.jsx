@@ -15,9 +15,9 @@ function Header() {
     <nav id="header-nav" className='bg-transparent w-full py-2 md:border-0 fixed top-0 z-50'>
       <div className='items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8'>
         <div className="flex items-center  justify-between py-3 md:py-5 md:block">
-          <a href="/" className="text-2xl font-bold text-blue-900/80">SES México</a>
+          <a href="/" className="text-2xl font-bold text-blue-100/80">SES México</a>
           <div className='md:hidden flex justify-between items-center '>
-            <button className="text-gray-100 outline-none p-2 rounded-md focus:border-gray-400 focus:border top-3 left-3"
+            <button className="text-blue-100/80 outline-none p-2 rounded-md focus:border-gray-400 focus:border top-3 left-3"
               onClick={() => setIsMenu(!isMenu)}
             >
               {
