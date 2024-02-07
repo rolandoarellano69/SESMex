@@ -2,21 +2,44 @@
 import Hero from "@/components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import Abcalum from "@/components/icons/abcalum.astro";
+import Medtronic from "@/components/icons/medtronic.astro";
+import Fluidraicon from "@/components/icons/fluidraicon.astro";
+import About from "@/components/About.astro";
+import Usicon from "@/components/icons/usicon.astro";
+
 ---
 
 <Layout title="SES México." description="SES México empresa de seguridad">
+  <Hero />
   <main class="px-4">
-    <Hero />
-    <SectionContainer class="py-44 pb-32">
-      <h1 class="text-4xl font-bold text-left text-white/90">
-        ¿Quiénes somos?
-      </h1>
-      <p class="text-white/90 text-pretty">
-        Somos una empresa de seguridad privada con más de 20 años de experiencia
-        en el mercado, ofreciendo servicios de seguridad privada, custodia de
-        valores, seguridad electrónica, monitoreo y rastreo satelital.
-      </p>
-      <SectionContainer />
+    <SectionContainer class="py-20 pb-32">
+      <div class="py-10">
+        <div class="max-w-screen-xl mx-auto px-4 md:px-8">
+          <h3 class="font-semibold text-xl text-[#354557] text-center"> Empresas que confian y respaldan nuestros servicios</h3>
+          <div class="mt-6">
+            <ul class="flex gap-x-10 gap-y-6 flex-wrap items-center justify-center md:gap-x-16 text-gray-100">
+                <li>
+                  <Abcalum class="w-32 h-32" />
+                </li>
+                <li>
+                  <Fluidraicon class="w-32 h-32" />
+                </li>
+                <li>
+                  <Medtronic class="w-32 h-32 " />
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <Usicon class="size-6 md:size-8" />
+        Quienes somos 
+        </h2>
+      <About />
     </SectionContainer>
   </main>
 </Layout>
