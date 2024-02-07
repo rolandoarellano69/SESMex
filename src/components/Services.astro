@@ -1,0 +1,80 @@
+---
+import Monitor from "./icons/Monitor.astro";
+import RondinIcon from "./icons/RondinIcon.astro";
+import ShellIcon from "./icons/Monitor.astro";
+
+
+const ICONS = {
+  security:{
+    name:"Astro",
+    class:"text-indigo-600",
+    icon: ShellIcon,
+  },
+  monitoreo:{
+    name:"Astro",
+    class:"text-indigo-600",
+    icon: Monitor,
+  },
+  rondines:{
+    name:"Astro",
+    class:"text-indigo-600",
+    icon: RondinIcon,
+  },
+
+
+
+};
+const SERVICES = [
+  {
+    title: "Seguridad",
+    description:
+      "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
+    icon: "",
+  },
+  {
+    title: "Patrullaje",
+    description:
+      "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
+    icon: "",
+  },
+  {
+    title: "Monitoreo",
+    description:
+      "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
+    icon: "",
+  },
+  {
+    title: "Rondines",
+    description:
+      "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
+    icon: "",
+  },
+];
+---
+
+<section class="py-14">
+  <div class="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
+    <div class="max-w-2xl mx-auto">
+     
+      <div class="mt-12">
+        <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            SERVICES.map(({title, description,icon}) => (
+              <article>
+                <li  class="space-y">
+                  <div class="w-12 h-12 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
+                    {icon}
+                  </div>
+                  <h4 class="text-lg text-gray-800 font-semibold">
+                    {title}
+                  </h4>
+                  <p>{description}</p>
+                </li>
+              </article>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
