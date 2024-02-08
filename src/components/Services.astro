@@ -2,72 +2,74 @@
 import Monitor from "./icons/Monitor.astro";
 import RondinIcon from "./icons/RondinIcon.astro";
 import ShellIcon from "./icons/Monitor.astro";
-
+import CarIcon from "./icons/CarIcon.astro";
 
 const ICONS = {
-  security:{
-    name:"Astro",
-    class:"text-indigo-600",
+  SEGURIDAD: {
+    name: "Seguridad",
+    class: "text-indigo-600",
     icon: ShellIcon,
   },
-  monitoreo:{
-    name:"Astro",
-    class:"text-indigo-600",
+  MONITOREO: {
+    name: "Monitoreo",
+    class: "text-indigo-600",
     icon: Monitor,
   },
-  rondines:{
-    name:"Astro",
-    class:"text-indigo-600",
+  RONDINES: {
+    name: "Rondines",
+    class: "text-indigo-600",
     icon: RondinIcon,
   },
-
-
-
+  PATRULLAJE: {
+    name: "Patrullaje",
+    class: "text-indigo-600",
+    icon: CarIcon,
+  },
 };
 const SERVICES = [
   {
     title: "Seguridad",
     description:
       "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
-    icon: "",
+    icons: [ICONS.SEGURIDAD],
   },
   {
     title: "Patrullaje",
     description:
       "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
-    icon: "",
+    icons: [ICONS.PATRULLAJE],
   },
   {
     title: "Monitoreo",
     description:
       "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
-    icon: "",
+    icons: [ICONS.MONITOREO],
   },
   {
     title: "Rondines",
     description:
       "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
-    icon: "",
+    icons: [ICONS.RONDINES],
   },
 ];
 ---
-
 <section class="py-14">
   <div class="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
     <div class="max-w-2xl mx-auto">
-     
       <div class="mt-12">
         <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
           {
-            SERVICES.map(({title, description,icon}) => (
+            SERVICES.map(({ title, description, icons }) => (
               <article>
-                <li  class="space-y">
-                  <div class="w-12 h-12 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
-                    {icon}
-                  </div>
-                  <h4 class="text-lg text-gray-800 font-semibold">
-                    {title}
-                  </h4>
+                <li class="space-y">
+                  {icons.map((icon) => (
+                    <div
+                      class={`w-12 h-12 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center ${icon.class}`}
+                    >
+                      <icon.icon class="w-6 h-6" />
+                    </div>
+                  ))}
+                  <h4 class="text-lg text-gray-800 font-semibold">{title}</h4>
                   <p>{description}</p>
                 </li>
               </article>
