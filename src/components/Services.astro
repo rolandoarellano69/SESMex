@@ -57,20 +57,20 @@ const SERVICES = [
   <div class="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
     <div class="max-w-2xl mx-auto">
       <div class="mt-12">
-        <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+        <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-4">
           {
             SERVICES.map(({ title, description, icons }) => (
               <article>
                 <li class="space-y">
                   {icons.map((icon) => (
                     <div
-                      class={`w-12 h-12 mx-auto bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center ${icon.class}`}
+                      class={`w-12 h-12 mx-auto bg-indigo-50 text-blue-600 rounded-full flex items-center justify-center ${icon.class}`}
                     >
-                      <icon.icon class="w-6 h-6" />
+                      <icon.icon class="size-6" />
                     </div>
                   ))}
-                  <h4 class="text-lg text-gray-800 font-semibold">{title}</h4>
-                  <p>{description}</p>
+                  <h4 class="text-2xl text-gray-100 m-2 font-semibold">{title}</h4>
+                  <p class="text-base text-gray-300 mt-4 text-pretty text-left">{description}</p>
                 </li>
               </article>
             ))
