@@ -1,28 +1,28 @@
 ---
 import Monitor from "./icons/Monitor.astro";
 import RondinIcon from "./icons/RondinIcon.astro";
-import ShellIcon from "./icons/Monitor.astro";
+import ShellIcon from "./icons/Shellicon.astro";
 import CarIcon from "./icons/CarIcon.astro";
 
 const ICONS = {
   SEGURIDAD: {
     name: "Seguridad",
-    class: "text-indigo-600",
+    class: "text-blue-700",
     icon: ShellIcon,
   },
   MONITOREO: {
     name: "Monitoreo",
-    class: "text-indigo-600",
+    class: "text-blue-700",
     icon: Monitor,
   },
   RONDINES: {
     name: "Rondines",
-    class: "text-indigo-600",
+    class: "text-blue-700",
     icon: RondinIcon,
   },
   PATRULLAJE: {
     name: "Patrullaje",
-    class: "text-indigo-600",
+    class: "text-blue-700",
     icon: CarIcon,
   },
 };
@@ -30,13 +30,13 @@ const SERVICES = [
   {
     title: "Personal de Seguridad",
     description:
-      "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
+      "Nuestro excelente equipo de oficiales de seguridad, esta altamente capacitado para ofrecer el mejor servicio  en  la protección y vigilancia de lugares y establecimientos, representando la imagen de su empresa con personal altamente profesional",
     icons: [ICONS.SEGURIDAD],
   },
   {
     title: "Patrullaje",
     description:
-      "Nuestro equipo de seguridad se encarga de mantener la seguridad de nuestros clientes y de la empresa.",
+      "Patrullaje táctico preventivo de alta movilidad con rango amplio de observación y sistema de rondas programadas para cobertura de áreas críticas, como estacionamientos y exteriores.",
     icons: [ICONS.PATRULLAJE],
   },
   {
@@ -57,7 +57,7 @@ const SERVICES = [
   <div class="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
     <div class="max-w-2xl mx-auto">
       <div class="mt-12">
-        <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-4">
+        <ul class="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-2">
           {
             SERVICES.map(({ title, description, icons }) => (
               <article>
@@ -70,7 +70,7 @@ const SERVICES = [
                     </div>
                   ))}
                   <h4 class="text-2xl text-gray-100 m-2 font-semibold">{title}</h4>
-                  <p class="text-base text-gray-300 mt-4 text-pretty text-left">{description}</p>
+                  <p class="text-sm text-gray-300 mt-4 text-pretty text-left">{description}</p>
                 </li>
               </article>
             ))
