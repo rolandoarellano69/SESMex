@@ -3,6 +3,7 @@ import Hero from "@/components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import About from "@/components/About.astro";
+import BentoGrid from "@/components/BentoGrid.astro";
 
 import Services from "@/components/Services.astro";
 import Banner from "@/components/Banner.astro";
@@ -35,16 +36,15 @@ import Stats from "@/components/Stats.astro";
       </p>
       <Services />
     </SectionContainer>
-    <Banner imageSrc="guardia-seguridad-lugar-trabajo (2).jpg"/>
+    <!-- <Banner imageSrc="guardia-seguridad-lugar-trabajo (2).jpg"/> -->
     <SectionContainer>
       <h3 class=" flex-row px-4 text-gray-100  text-3xl font-semibold sm:text-4xl">
         Sobre Nosotros
       </h3>
       <About />
-      
     </SectionContainer>
       <Stats />
-      <Banner imageSrc="parque-industrial-edificio-fabrica-almacen (1).jpg"/>
-  
+      <!-- <Banner imageSrc="parque-industrial-edificio-fabrica-almacen (1).jpg"/> -->
+    <BentoGrid/>
   </main>
 </Layout>
