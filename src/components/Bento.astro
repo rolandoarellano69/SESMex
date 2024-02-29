@@ -3,25 +3,78 @@ import BentoItem from "./BentoItem.astro";
 ---
 
 <section
-  class={`w-full max-w-[1400px] grid grid-cols-10 auto-rows-[35rem] gap-4 mx-auto p-20`}
+  class={`w-full max-w-[1200px] grid grid-cols-10 auto-rows-[30rem] gap-4 mx-auto p-20`}
 >
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="Lorem asdjas jdas sdj ja"
-  />
+  <BentoItem class="col-span-10 md:col-span-4" title="Permisos Estatal Vigente">
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 w-full object-cover object-center
+  h-full group-hover:scale-110 transtion-scale duration-1000 ease-in-out opacity-80 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10"
+      style="background-image: url('/permiso.avif')"
+    >
+    </div>
+    <p
+      slot="content"
+      class="text-green-300 text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+    >
+      SSC-02PF20180313-353
+    </p>
+  </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
     title="Lorem asdjas jdas sdj ja"
     subtitle="asdasf"
-  />
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 w-full object-cover object-center
+  h-full group-hover:scale-110 transtion-scale duration-1000 ease-in-out opacity-80 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10"
+      style="background-image: url('/permiso.avif')"
+    >
+    </div>
+    <p
+      slot="content"
+      class="text-green-300 text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+    >
+      SSC-02PF20180313-353
+    </p>
+  </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
     title="Lorem asdjas jdas sdj ja"
     subtitle="asdasf"
-  />
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 w-full object-cover object-center
+  h-full group-hover:scale-110 transtion-scale duration-1000 ease-in-out opacity-80 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10"
+      style="background-image: url('/permiso.avif')"
+    >
+    </div>
+    <p
+      slot="content"
+      class="text-green-300 text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+    >
+      SSC-02PF20180313-353
+    </p>
+  </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-4"
     title="Lorem asdjas jdas sdj ja"
     subtitle="asdasf"
-  />
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 w-full object-cover object-center
+  h-full group-hover:scale-110 transtion-scale duration-1000 ease-in-out opacity-80 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10"
+      style="background-image: url('/permiso.avif')"
+    >
+    </div>
+    <p
+      slot="content"
+      class="text-green-300 text-sm font-medium me-2 px-2.5 py-0.5 rounded"
+    >
+      SSC-02PF20180313-353
+    </p>
+  </BentoItem>
 </section>

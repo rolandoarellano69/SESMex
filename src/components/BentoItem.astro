@@ -1,4 +1,5 @@
 ---
+
 interface Props {
   title: string;
   subtitle?: string;
@@ -6,14 +7,23 @@ interface Props {
 }
 const { title, subtitle } = Astro.props;
 ---
-
+ 
 <article
-  class={`${Astro.props.class} relative col-span-5 rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10`}
+  class={`${Astro.props.class} relative col-span-5 rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 overflow-hidden group`}
 >
-<slot name="image"> </slot>
-  <div class="select-none flex flex-col gap-1 p-6 text-lg z-20">
+<div class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-40% from-transparent via-black/50 to-black/80">
+
+</div>
+  <slot name="image" />
+  <div class="relative select-none flex flex-col gap-1 p-6 text-lg z-20 justify-end h-full">
     <h2 class="text-gray-100 font-bold text-balance mb-4 text-2xl">{title}</h2>
-  {subtitle && <h3 class="text-xl font-semibold text-gray-300 -mt-4 ">{subtitle}</h3>}
-  <slot name="content"></slot>
+    {
+      subtitle && (
+        <h3 class="text-xl font-semibold text-gray-300 -mt-4 ">{subtitle}</h3>
+      )
+    }
+    <slot name="content" />
+
   </div>
+  
 </article>
