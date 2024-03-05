@@ -3,7 +3,6 @@ import Hero from "@/components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import About from "@/components/About.astro";
-import BentoGrid from "@/components/Bento.astro";
 
 import Services from "@/components/Services.astro";
 import Banner from "@/components/Banner.astro";
@@ -11,7 +10,10 @@ import LogoGrid from "@/components/LogoGrid.astro";
 import Stats from "@/components/Stats.astro";
 ---
 
-<Layout title="SES México. " description="SES México | Sistemas de Especializados de Seguridad Privada México con presencia en disitntos estados de Baja California 👮🏻 ">
+<Layout
+  title="SES México. "
+  description="SES México | Sistemas de Especializados de Seguridad Privada México con presencia en disitntos estados de Baja California 👮🏻 "
+>
   <Hero />
   <main class="px-4">
     <SectionContainer class="py-20 pb-32">
@@ -31,20 +33,22 @@ import Stats from "@/components/Stats.astro";
         Nuestros servicios
       </h3>
       <p class="px-4 mt-4 text-lg text-pretty text-center text-gray-300">
-        Los servicios están diseñados para brindar la mejor seguridad a
-        nuestros clientes.
+        Los servicios están diseñados para brindar la mejor seguridad a nuestros
+        clientes.
       </p>
       <Services />
     </SectionContainer>
     <!-- <Banner imageSrc="guardia-seguridad-lugar-trabajo (2).jpg"/> -->
     <SectionContainer>
-      <h3 class=" flex-row px-4 text-gray-100  text-3xl font-semibold sm:text-4xl">
+      <h3
+        class="flex-row px-4 text-gray-100 text-3xl font-semibold sm:text-4xl"
+      >
         Sobre Nosotros
       </h3>
       <About />
     </SectionContainer>
-      <Stats />
-      <!-- <Banner imageSrc="parque-industrial-edificio-fabrica-almacen (1).jpg"/> -->
-    <BentoGrid/>
+    <Stats />
+    <Banner imageSrc="parque-industrial-edificio-fabrica-almacen (1).jpg" />
+    <!-- <Banner imageSrc="guardia-seguridad-lugar-trabajo (2).jpg"/> -->
   </main>
 </Layout>
