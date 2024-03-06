@@ -60,12 +60,15 @@ const CONTACT = [
         {
           CONTACT.map(({ icons, title, contact }) => (
             <li>
-              <h4 class="text-gray-800 text-lg font-medium">
-                
-                </h4>
+              <h4 class="text-gray-800 text-lg font-medium">{title}</h4>
               <div class="mt-3 flex items-center gap-x-3">
-                <div class="flex-none text-gray-400" />
+                {icons.map((icon) => (
+                  <div class={`flex-none text-gray-400 ${icon.class}`}>
+                    <icon.icon class="w-6 h-6" />
+                  </div>
+                ))}
               </div>
+              <p>{contact}</p>
             </li>
           ))
         }
