@@ -24,18 +24,18 @@ const ICONS = {
 };
 const CONTACT = [
   {
-    icons: [ICONS.lOCATION],
-    contact: "lorem ipsum",
-    title: "Phone",
+    icons: [ICONS.PHONE],
+    contact: "664-503-91-65",
+    title: "Teléfono",
   },
   {
-    icons: [ICONS.lOCATION],
-    contact: "lorem ipsum",
+    icons: [ICONS.EMAIL],
+    contact: "sesmexico@outlook.com",
     title: "Email",
   },
   {
     icons: [ICONS.lOCATION],
-    contact: "lorem ipsum",
+    contact: "Plaza Campos, 1311 ",
     title: "Location",
   },
 ];
@@ -44,13 +44,12 @@ const CONTACT = [
 <section class="py-14">
   <div class="max-w-screen-lg mx-auto px-4 text-gray-600 md:px-8">
     <div class="max-w-xl space-y-3">
-      <h3 class="text-indigo-600 font-semibold">Contacto</h3>
-      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
-        Let us know how we can help
+      <h3 class="text-blue-600 font-semibold">Contacto</h3>
+      <p class="text-gray-300 text-3xl font-semibold sm:text-4xl">
+        Háganos saber cómo podemos ayudarle
       </p>
-      <p>
-        We’re here to help and answer any question you might have, We look
-        forward to hearing from you .
+      <p class="text-pretty text-base text-gray-100/80">
+        Estamos aquí para ayudarle y responder a cualquier pregunta que pueda tener.
       </p>
     </div>
     <div class="mt-12">
@@ -60,15 +59,15 @@ const CONTACT = [
         {
           CONTACT.map(({ icons, title, contact }) => (
             <li>
-              <h4 class="text-gray-800 text-lg font-medium">{title}</h4>
+              <h4 class="text-gray-200 text-lg font-medium">{title}</h4>
               <div class="mt-3 flex items-center gap-x-3">
                 {icons.map((icon) => (
-                  <div class={`flex-none text-gray-400 ${icon.class}`}>
+                  <div class={`flex-none text-blue-600 ${icon.class}`}>
                     <icon.icon class="w-6 h-6" />
                   </div>
                 ))}
               </div>
-              <p>{contact}</p>
+              <p class="mt-4 text-pretty text-base text-gray-100/80">{contact}</p>
             </li>
           ))
         }
